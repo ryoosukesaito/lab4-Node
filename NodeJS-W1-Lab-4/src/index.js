@@ -1,6 +1,7 @@
 const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
+const ejs = require("ejs");
 
 /* ---------------------------- setups and config --------------------------- */
 const app = express();
@@ -12,14 +13,13 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 app.set("views", "src/views");
 
-app.get('')
-
+// app.get('')
 
 
 /* ------------------------------- middleware ------------------------------- */
-app.use("/api/members", require("./routes/members"));
+app.get("/", (req, res) => res.render("index", {msg: "Health Message"}));
 
-app.get("/", (req, res) => res.json({ msg: "Health Check" }));
+app.use("/api/members", require("./routes/members"));
 
 app.use((req, res) => res.sendFile(path.join(__dirname, "public", "404.html")));
 

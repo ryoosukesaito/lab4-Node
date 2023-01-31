@@ -1,0 +1,23 @@
+<%-include('./partials/header.ejs')%>
+
+  <h1>Member</h1>
+  <table class="repo">
+    <tr class="repo-title">
+      <th>
+        <h3>id</h3>
+      </th>
+      <th>
+        <h3>Name</h3>
+      </th>
+      <th>
+        <h3>Email</h3>
+      </th>
+    </tr>
+
+    <%- include('_list.member.ejs')%>
+
+  </table>
+
+  <%- include('_input.member.ejs')%>
+
+  <%-include('./partials/footer.ejs')%>

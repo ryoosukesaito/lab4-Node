@@ -16,6 +16,11 @@
     padding: 1.2rem;
     letter-spacing: 1px;
   }
+
+  h3{
+    margin:1rem;
+
+  }
   
   .login-form {
     width: 60%;
@@ -70,9 +75,10 @@
   }
   
   .repo {
+    margin: 2rem;
     padding: 2rem;
     list-style: none;
-    border-bottom: 1px solid rgba(96, 96, 96, 0.638);
+    border: 1px solid rgba(96, 96, 96, 0.638);
   }
   
   .repo-title {
@@ -84,5 +90,6 @@
   .repo-description {
     margin-top: 1rem;
     color: #ccc;
+    border-bottom: 1px solid rgba(96, 96, 96, 0.638);
   }
-  
+
